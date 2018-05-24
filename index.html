@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>SpermLabs</title>
+
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="jumbotron-narrow.css" rel="stylesheet">
+    <link href="custom.css" rel="stylesheet">
+    <script src="assets/js/ie-emulation-modes-warning.js"></script>
+    <script src="interface.js"></script>
+    <script src="main.js"></script>
+
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-119764780-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-119764780-1');
+	</script>
+
+  </head>
+
+  <body bgcolor="#CCCC00">
+    <div id="myModal" class="modal">
+
+      <div class="modal-content">
+        <div id="modal-internal"></div>
+      </div>
+
+    </div>
+
+    <div class="container">
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation"><a href="https://discord.gg/AkaGFuE">Discord</a></li>
+            <li role="presentation"><a href="https://etherscan.io/address/0xc6f01013bb252bea52646ef91d5a662515684701">Contract</a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">SpermLabs</h3>  <h4 class="text-muted">Get rich quick or die trying</h4>
+      </div>
+
+      <div class="jumbotron">
+
+	      <p class="lead"></p>
+
+          <div class="container altcolor">
+              <div class="row">
+                <div class="col-md-4">
+                    <img src="favicon.ico" width="150" height="150">
+
+                    </div>
+                <div class="col-md-6">
+                    <h2><span class="numsperm">?</span> Sperms</h2>
+                    <br>
+                    <h2>Producing <span id="production">?</span> cells per hour</h2>
+                </div>
+              </div>
+              <div class="row">
+                <p><a id="getfreesperm" class="btn btn-lg btn-success invis" onclick="getFreeSperm1()" role="button">Get 500 Starter Sperms!</a></p>
+
+              </div>
+          </div>
+          <div class="container altcolor">
+              <div class="row">
+                    <div class="col-md-4" >
+                    </div>
+                    <div class="col-md-8">
+                    <h2><span class="numcells">0</span> Cells
+                    <br>
+                    <h3>(<span id="timeuntilfull">?</span> until nads are full)</h3>
+                    </h2>
+                    </div>
+              </div>
+              <br><br>
+                <div class="row">
+                    <div class="col-md-4" >
+                        <img src="SpermEgg.png" width="150" height="150">
+                    </div>
+
+                    <div class="col-md-4"><p><a class="btn btn-lg btn-success" onclick="makeSperm1(displayTransactionMessage)" role="button">Make <span id="makeSpermQuantity">?</span> Sperms</a></p></div>
+              </div>
+              <div class="row">
+                  <div class="col-md-4"></div>
+                  <div class="col-md-4">
+                    <p><a class="btn btn-lg btn-info" onclick="sellCells(displayTransactionMessage)"  role="button">Sell For <span id="sellprice">?</span></a></p>
+                  </div>
+              </div>
+                <div class="row">
+                    <div class="col-md-4" >
+                    </div>
+                    <div class="col-md-8">
+                        <p><span id="sellsforexample">0 cells would sell for 0.0</span></p>
+                        <p>When you sell your cells, one third of your sperms will die so sell wisely!</p>
+                    </div>
+              </div>
+          </div>
+          <div class="container altcolor">
+              <div class="row">
+                <div class="col-md-4">
+                    <img src="ether.png" width="150" height="150">
+
+                    </div>
+                <div class="col-md-7">
+                    <a class="btn btn-lg btn-info" onclick="buyCells2()"  role="button">Buy</a>
+                    <h2><span id="cellstobuy">?</span> cells for </h2><input class="form-control" type="number" style="width: 130px" onchange="updateBuyPrice()" step="0.01" value="0.01" id="ethtospend">
+					<br>(NOTE: this is the default value. Adjust this number up or down to buy different amount of cells)
+                </div>
+
+              </div>
+			  <br><br></div>
+			<div class="container altcolor">
+              <div class="row">
+                <div class="col-md-4">
+                    <img src="spermlord.ico" width="150" height="150">
+
+                    </div>
+                <div class="col-md-7">
+                    <a class="btn btn-lg btn-success" onclick="becomeSpermlord(displayTransactionMessage)"  role="button">Become the Spermlord!</a>
+                    <h2>Sacrifice <span id="spermlordprice">?</span> Sperms</h2>
+					<h4><br>You get to inherit all the dev fees and the new Spermlord requirement will become the number of sperm you have left after sacrificing!</h4>
+					<br>(NOTE: if you have cells, some of them will disappear when you sacrifice sperm. Make sure to make more sperms first!)
+                </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="row marketing">
+        <div class="col-lg-6">
+          <h4>Earn Ethereum Farming Sperm!</h4>
+		<p>Ready for a lambo?</p>
+
+          <h4>Powered by Metamask</h4>
+          <p>This game requires <a href="https://metamask.io/">Metamask</a></p>
+        </div>
+
+        <div class="col-lg-6">
+            <h4>Sperms Are Frail Technology</h4>
+		<p>Sperm is revolutionizing the future, and thus we've implemented a few cool features. One third of your Sperm will die if you sell your new Sperm. Those willing to make the greatest sacrifice can become the Sperm Master, and collect dividends on every Sperm transaction! </p>
+
+            <h4>Referrals</h4>
+          <p>Earn <b>20%</b> of all Sperm created by anyone who signs up using your custom link: <a onclick="copyRef()" id="playerreflink">?</span></p>
+
+        <input style="display:none;" type="text" value="Hello Worldfdgerh" id="copytextthing">
+        </div>
+
+      </div>
+
+      <footer class="footer">
+      </footer>
+
+    </div>
+
+    <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script>
+        main()
+    </script>
+  </body>
+
+</html>
